@@ -1,0 +1,349 @@
+.scroll-linked-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+  position: sticky;
+  border-top: 5px blue;
+  top: 0;
+  height: 100vh;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 70%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 20px solid blue;
+  border-bottom: 20px solid blue;
+}
+
+.vision-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+  color: #1a1a2e;
+}
+
+.vision-content {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.vision-text {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vision-text p {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  margin: 0 0 2rem 0;
+}
+
+.vision-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.author-role {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+/* Vision Text */
+.vision-text.transitioning-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.vision-text.transitioning-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.right-panel {
+  flex: 1;
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 4rem 2rem 0;
+  scroll-behavior: smooth;
+}
+
+.right-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right-panel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.right-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.profiles-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 20px solid rgb(255, 0, 0);
+  border-bottom: 20px solid rgb(255, 0, 0);
+}
+
+.scroll-spacer-top,
+.scroll-spacer-bottom {
+  flex-shrink: 0;
+}
+
+/* Profile Cards */
+.profile-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.5;
+  transform: translateY(0);
+  min-height: 200px;
+}
+
+.profile-card.active {
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card.transitioning-out {
+  opacity: 0.3;
+  transform: translateY(20px) scale(0.95);
+}
+
+.profile-card.transitioning-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  transition: border-color 0.4s ease;
+  order: 2;
+}
+
+.profile-card.active .profile-image-container {
+  border-color: #667eea;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  order: 1;
+}
+
+.profile-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.4s ease;
+}
+
+.profile-card.active .profile-name {
+  color: #1a1a2e;
+}
+
+.profile-role {
+  font-size: 1.05rem;
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.4s ease;
+}
+
+.profile-card.active .profile-role {
+  color: #667eea;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.profile-card.active .social-icon {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.profile-card.active .social-icon:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .left-panel {
+    padding: 3rem 1.5rem;
+  }
+
+  .vision-card {
+    padding: 2rem;
+  }
+
+  .vision-title {
+    font-size: 2rem;
+  }
+
+  .vision-text p {
+    font-size: 1.1rem;
+  }
+
+  .right-panel {
+    padding: 0 1.5rem;
+  }
+
+  .profile-card {
+    padding: 2rem;
+    min-height: 180px;
+  }
+
+  .profile-image-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .scroll-linked-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel {
+    position: relative;
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .left-panel {
+    padding: 2rem 1rem;
+  }
+
+  .vision-card {
+    padding: 1.5rem;
+  }
+
+  .vision-title {
+    font-size: 1.75rem;
+  }
+
+  .vision-text p {
+    font-size: 1rem;
+  }
+
+  .right-panel {
+    padding: 0 1rem;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .profile-image-container {
+    width: 100px;
+    height: 100px;
+    order: 1;
+  }
+
+  .profile-info {
+    order: 2;
+    align-items: center;
+  }
+
+  .profile-name {
+    font-size: 1.35rem;
+  }
+
+  .profile-role {
+    font-size: 0.95rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

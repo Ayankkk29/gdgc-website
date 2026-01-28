@@ -1,19 +1,9 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 export default function AboutUs() {
   return (
     <div className="w-full min-h-screen bg-white p-6 md:p-12 flex flex-col items-center">
-      {/* Navbar Home Link */}
-      <nav className="w-full flex justify-start mb-6">
-        <Link to="/" className="text-blue-600 underline text-lg hover:text-blue-800">Home</Link>
-      </nav>
-
       {/* Title Section */}
       <div className="w-full flex flex-col items-start">
-        <img src="/gdg.png" alt="GDG Logo" className="w-28 mb-4" />
-
         <div className="flex items-center gap-4">
           <div className="text-yellow-500 text-4xl font-bold">||</div>
           <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
@@ -51,7 +41,7 @@ export default function AboutUs() {
 
         {/* Collage Image */}
         <div className="w-full flex justify-center mt-6">
-          <img src="/college.png" alt="College Collage" className="w-full max-w-xl rounded-xl shadow" />
+          <img src="/College.png" alt="College Collage" className="w-full max-w-xl rounded-xl shadow" />
         </div>
       </div>
     </div>

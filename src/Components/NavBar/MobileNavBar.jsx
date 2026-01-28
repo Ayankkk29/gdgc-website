@@ -13,7 +13,6 @@ import {
     CollapsibleContent,
     CollapsibleTrigger,
 } from "@/shadcn/ui/collapsible";
-import AboutUs from "../AboutUs/AboutUs";
 
 const navItems = [
     {
@@ -186,6 +185,9 @@ function MobileNavBar() {
                         </MobileNavLink>
                         <MobileNavLink to="/contact" onNavigate={closeMenu}>
                             Contact
+                        </MobileNavLink>
+                        <MobileNavLink to="/about" onNavigate={closeMenu}>
+                            About
                         </MobileNavLink>
                     </div>
 

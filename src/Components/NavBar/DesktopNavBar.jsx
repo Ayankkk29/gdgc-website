@@ -170,6 +170,15 @@ function DesktopNavBar() {
                             <Link to="/contact">Contact</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuLink
+                            asChild
+                            className={navigationMenuTriggerStyle()}
+                        >
+                            <Link to="/about">About</Link>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
 
