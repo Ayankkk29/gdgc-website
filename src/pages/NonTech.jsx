@@ -1,21 +1,39 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-
-const teamHeadings = {
-    eventManagementTeam: "Event Management Team",
-    socialMediaMarketingTeam: "Social Media & Marketing Team",
-    designContentTeam: "Design & Content Team",
-    videoPhotographyTeam: "Videography and Photography Team",
-};
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import DomainPageLayout from "@/Components/Domains/DomainPageLayout";
+import {
+    getNonTechDomainsList,
+    getNonTechDomainById,
+    getDefaultNonTechDomain,
+} from "@/data/domains";
 
 function NonTech() {
     const { teamParam } = useParams();
-    const heading = teamHeadings[teamParam] || "Non-Tech Team";
+    const navigate = useNavigate();
+    const domains = getNonTechDomainsList();
+
+    // Get the active domain based on URL param, or default to first domain
+    const activeDomain = teamParam
+        ? getNonTechDomainById(teamParam)
+        : getDefaultNonTechDomain();
+
+    // Redirect to default domain if no param or invalid param
+    useEffect(() => {
+        if (!teamParam || !getNonTechDomainById(teamParam)) {
+            navigate(`/teams/nonTech/${getDefaultNonTechDomain().id}`, {
+                replace: true,
+            });
+        }
+    }, [teamParam, navigate]);
 
     return (
-        <section className="px-6 py-10">
-            <h1 className="text-3xl font-bold">{heading}</h1>
-        </section>
+        <DomainPageLayout
+            domains={domains}
+            activeDomain={activeDomain}
+            basePath="/teams/nonTech"
+            categoryName="Non-Tech Domains"
+            categoryType="nonTech"
+        />
     );
 }
 

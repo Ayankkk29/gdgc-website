@@ -39,7 +39,7 @@ const techDomainLinks = [
     {
         title: "Women Techmakers",
         href: "/teams/tech/womenTechmakers",
-        description: "",
+        description: "Meet our Women Techmakers community",
     },
 ];
 
