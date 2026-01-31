@@ -1,9 +1,18 @@
 // Social Media & Marketing Domain Data
+import {
+    Megaphone,
+    Smartphone,
+    Palette,
+    BarChart2,
+    Mail,
+    Coffee,
+} from "lucide-react";
+
 const socialMediaDomain = {
     id: "socialMediaMarketingTeam",
     name: "Social Media & Marketing",
     shortName: "Marketing",
-    icon: "📢",
+    icon: Megaphone,
     color: "#34A853",
     description:
         "Amplify the community's reach through strategic social media and marketing initiatives.",
@@ -18,11 +27,11 @@ const socialMediaDomain = {
         "Campaign Planning",
     ],
     tools: [
-        { name: "Buffer", icon: "📱" },
-        { name: "Canva", icon: "🎨" },
-        { name: "Google Analytics", icon: "📈" },
-        { name: "Mailchimp", icon: "📧" },
-        { name: "Hootsuite", icon: "🦉" },
+        { name: "Buffer", icon: Smartphone },
+        { name: "Canva", icon: Palette },
+        { name: "Google Analytics", icon: BarChart2 },
+        { name: "Mailchimp", icon: Mail },
+        { name: "Hootsuite", icon: Coffee },
     ],
     projects: [
         {

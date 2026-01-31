@@ -1,9 +1,11 @@
 // Design & Content Domain Data
+import { Palette, Layers, FileText, Wand } from "lucide-react";
+
 const designDomain = {
     id: "designContentTeam",
     name: "Design & Content",
     shortName: "Design",
-    icon: "🎨",
+    icon: Palette,
     color: "#FBBC04",
     description:
         "Create visually stunning designs and compelling content that tells our story.",
@@ -18,11 +20,11 @@ const designDomain = {
         "Design Systems",
     ],
     tools: [
-        { name: "Figma", icon: "🎨" },
-        { name: "Adobe Creative Suite", icon: "🅰️" },
-        { name: "Canva", icon: "✨" },
-        { name: "Notion", icon: "📝" },
-        { name: "Lottie", icon: "🎬" },
+        { name: "Figma", icon: Layers },
+        { name: "Adobe Creative Suite", icon: Wand },
+        { name: "Canva", icon: Palette },
+        { name: "Notion", icon: FileText },
+        { name: "Lottie", icon: FileText },
     ],
     projects: [
         {

@@ -1,9 +1,11 @@
 // Blockchain Domain Data
+import { Link, FileText, Wrench, Shield, Zap } from "lucide-react";
+
 const blockchainDomain = {
     id: "blockChainTeam",
     name: "Blockchain",
     shortName: "Blockchain",
-    icon: "⛓️",
+    icon: Link,
     color: "#EA4335",
     description:
         "Dive into decentralized technologies, smart contracts, and Web3 development.",
@@ -18,11 +20,11 @@ const blockchainDomain = {
         "IPFS & Decentralized Storage",
     ],
     tools: [
-        { name: "Solidity", icon: "📜" },
-        { name: "Hardhat", icon: "⛑️" },
-        { name: "MetaMask", icon: "🦊" },
-        { name: "Remix IDE", icon: "🔧" },
-        { name: "OpenZeppelin", icon: "🛡️" },
+        { name: "Solidity", icon: FileText },
+        { name: "Hardhat", icon: Wrench },
+        { name: "MetaMask", icon: Shield },
+        { name: "Remix IDE", icon: Wrench },
+        { name: "OpenZeppelin", icon: Shield },
     ],
     projects: [
         {

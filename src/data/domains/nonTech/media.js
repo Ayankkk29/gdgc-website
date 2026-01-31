@@ -1,9 +1,11 @@
 // Videography & Photography Domain Data
+import { Camera, Film, Video, CameraOff, Videotape } from "lucide-react";
+
 const mediaDomain = {
     id: "videoPhotographyTeam",
     name: "Videography & Photography",
     shortName: "Media",
-    icon: "📸",
+    icon: Camera,
     color: "#EA4335",
     description:
         "Capture and create visual stories that showcase the community's journey.",
@@ -18,11 +20,11 @@ const mediaDomain = {
         "Content Production",
     ],
     tools: [
-        { name: "Adobe Premiere", icon: "🎬" },
-        { name: "DaVinci Resolve", icon: "🎥" },
-        { name: "Lightroom", icon: "📷" },
-        { name: "OBS Studio", icon: "🔴" },
-        { name: "After Effects", icon: "✨" },
+        { name: "Adobe Premiere", icon: Film },
+        { name: "DaVinci Resolve", icon: Video },
+        { name: "Lightroom", icon: Camera },
+        { name: "OBS Studio", icon: Videotape },
+        { name: "After Effects", icon: Film },
     ],
     projects: [
         {

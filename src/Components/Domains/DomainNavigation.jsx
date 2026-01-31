@@ -33,7 +33,11 @@ function DomainNavigation({ domains, activeDomainId, basePath, categoryName }) {
                                     : {}
                             }
                         >
-                            <span className="text-lg">{domain.icon}</span>
+                            <span className="text-lg">
+                                {domain.icon && (
+                                    <domain.icon className="w-5 h-5" />
+                                )}
+                            </span>
                             <span className="hidden sm:inline">
                                 {domain.shortName}
                             </span>

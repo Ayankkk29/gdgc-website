@@ -1,9 +1,11 @@
 // Web Development Domain Data
+import { Globe, Monitor, Code, Zap, Database, Palette } from "lucide-react";
+
 const webDevDomain = {
     id: "webDTeam",
     name: "Web Development",
     shortName: "Web Dev",
-    icon: "🌐",
+    icon: Globe,
     color: "#4285F4",
     description:
         "Build modern, responsive, and scalable web applications using cutting-edge technologies.",
@@ -18,12 +20,12 @@ const webDevDomain = {
         "Responsive Design",
     ],
     tools: [
-        { name: "VS Code", icon: "💻" },
-        { name: "React", icon: "⚛️" },
-        { name: "Node.js", icon: "🟢" },
-        { name: "MongoDB", icon: "🍃" },
-        { name: "Firebase", icon: "🔥" },
-        { name: "Tailwind CSS", icon: "🎨" },
+        { name: "VS Code", icon: Monitor },
+        { name: "React", icon: Code },
+        { name: "Node.js", icon: Zap },
+        { name: "MongoDB", icon: Database },
+        { name: "Firebase", icon: Zap },
+        { name: "Tailwind CSS", icon: Palette },
     ],
     projects: [
         {

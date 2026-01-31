@@ -1,9 +1,11 @@
 // Women Techmakers Domain Data
+import { Users, Video, MessageSquare, FileText, Palette } from "lucide-react";
+
 const wtmDomain = {
     id: "womenTechmakers",
     name: "Women Techmakers",
     shortName: "WTM",
-    icon: "👩‍💻",
+    icon: Users,
     color: "#1DA462",
     description:
         "Empowering women in technology through visibility, community, and resources.",
@@ -18,10 +20,10 @@ const wtmDomain = {
         "Networking",
     ],
     tools: [
-        { name: "Google Meet", icon: "📹" },
-        { name: "Slack", icon: "💬" },
-        { name: "Notion", icon: "📝" },
-        { name: "Canva", icon: "🎨" },
+        { name: "Google Meet", icon: Video },
+        { name: "Slack", icon: MessageSquare },
+        { name: "Notion", icon: FileText },
+        { name: "Canva", icon: Palette },
     ],
     projects: [
         {

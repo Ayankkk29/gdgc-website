@@ -9,7 +9,7 @@ function DomainInfo({ domain }) {
                     className="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-3xl md:text-4xl"
                     style={{ backgroundColor: `${domain.color}20` }}
                 >
-                    {domain.icon}
+                    {domain.icon && <domain.icon className="w-8 h-8" />}
                 </div>
                 <div className="flex-1">
                     <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
@@ -57,7 +57,7 @@ function DomainInfo({ domain }) {
                                 key={index}
                                 className="flex items-center gap-2 px-3 py-2.5 bg-secondary rounded-lg"
                             >
-                                <span className="text-lg">{tool.icon}</span>
+                                {tool.icon && <tool.icon className="w-5 h-5" />}
                                 <span className="text-sm font-medium text-foreground truncate">
                                     {tool.name}
                                 </span>

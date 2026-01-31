@@ -1,9 +1,17 @@
 // Event Management Domain Data
+import {
+    PartyPopper,
+    FileText,
+    Clipboard,
+    Calendar,
+    Ticket,
+} from "lucide-react";
+
 const eventsDomain = {
     id: "eventManagementTeam",
     name: "Event Management",
     shortName: "Events",
-    icon: "🎉",
+    icon: PartyPopper,
     color: "#4285F4",
     description:
         "Plan, organize, and execute memorable events that bring the community together.",
@@ -18,11 +26,11 @@ const eventsDomain = {
         "Team Coordination",
     ],
     tools: [
-        { name: "Google Sheets", icon: "📊" },
-        { name: "Notion", icon: "📝" },
-        { name: "Trello", icon: "📋" },
-        { name: "Eventbrite", icon: "🎫" },
-        { name: "Google Calendar", icon: "📅" },
+        { name: "Google Sheets", icon: FileText },
+        { name: "Notion", icon: FileText },
+        { name: "Trello", icon: Clipboard },
+        { name: "Eventbrite", icon: Ticket },
+        { name: "Google Calendar", icon: Calendar },
     ],
     projects: [
         {

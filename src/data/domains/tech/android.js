@@ -1,16 +1,18 @@
 // Android Development Domain Data
+import { Smartphone, Code } from "lucide-react";
+
 const androidDomain = {
     id: "androidTeam",
     name: "Android Development",
     shortName: "Android",
-    icon: "📱",
+    icon: Smartphone,
     color: "#34A853",
     description:
         "Create powerful Android applications using Kotlin and modern Android development practices.",
     skills: ["Kotlin Programming", "Android SDK", "Jetpack Compose"],
     tools: [
-        { name: "Android Studio", icon: "🤖" },
-        { name: "Kotlin", icon: "🅺" },
+        { name: "Android Studio", icon: Code },
+        { name: "Kotlin", icon: Code },
     ],
     projects: [
         {

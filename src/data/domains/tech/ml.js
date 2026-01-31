@@ -1,9 +1,11 @@
 // Machine Learning Domain Data
+import { Cpu, Code, BookOpen, Cloud, BarChart2, Zap } from "lucide-react";
+
 const mlDomain = {
     id: "mlTeam",
     name: "Machine Learning",
     shortName: "ML/AI",
-    icon: "🤖",
+    icon: Cpu,
     color: "#FBBC04",
     description:
         "Explore the world of artificial intelligence and machine learning with hands-on projects.",
@@ -18,11 +20,11 @@ const mlDomain = {
         "Model Deployment",
     ],
     tools: [
-        { name: "Python", icon: "🐍" },
-        { name: "TensorFlow", icon: "🧠" },
-        { name: "Jupyter", icon: "📓" },
-        { name: "Google Colab", icon: "☁️" },
-        { name: "Kaggle", icon: "📊" },
+        { name: "Python", icon: Code },
+        { name: "TensorFlow", icon: Zap },
+        { name: "Jupyter", icon: BookOpen },
+        { name: "Google Colab", icon: Cloud },
+        { name: "Kaggle", icon: BarChart2 },
     ],
     projects: [
         {
