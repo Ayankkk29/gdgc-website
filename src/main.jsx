@@ -58,10 +58,15 @@ createRoot(document.getElementById("root")).render(
                             path="/teams/nonTech/:teamParam"
                             element={<NonTech />}
                         />
-                        <Route path="allEvents" element={<AllEvents />} />                        <Route path="event-registration" element={<EventRegistration />} />                        <Route path="about" element={<AboutUs />} />
-                        <Route path="advitya" element={<Advitya />} />
+                        <Route path="allEvents" element={<AllEvents />} />{" "}
+                        <Route
+                            path="event-registration"
+                            element={<EventRegistration />}
+                        />{" "}
+                        <Route path="about" element={<AboutUs />} />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Route>
+                    <Route path="/advitya" element={<Advitya />} />
                 </Routes>
             </ScrollProvider>
         </BrowserRouter>
