@@ -218,6 +218,15 @@ function DesktopNavBar() {
                             asChild
                             className={navigationMenuTriggerStyle()}
                         >
+                            <Link to="/advitya">Advitya</Link>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuLink
+                            asChild
+                            className={navigationMenuTriggerStyle()}
+                        >
                             <Link to="/about">About</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>

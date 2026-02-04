@@ -236,6 +236,9 @@ function MobileNavBar() {
                         >
                             Contact
                         </MobileNavLink>
+                        <MobileNavLink to="/advitya" onNavigate={closeMenu}>
+                            Advitya
+                        </MobileNavLink>
                         <MobileNavLink to="/about" onNavigate={closeMenu}>
                             About
                         </MobileNavLink>
