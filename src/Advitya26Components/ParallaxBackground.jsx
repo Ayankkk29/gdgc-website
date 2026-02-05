@@ -61,7 +61,7 @@ const ParallaxBackground = () => {
             <motion.img
                 src="/olympicsImages/torriigate.png"
                 alt="Torri Gate"
-                className='absolute -bottom-22.5 -left-15 h-[60vh] z-80'
+                className='absolute -bottom-30 -left-15 h-[60vh] z-80'
                 // dont remove these part these for reference
                 // initial={{ x: "-100%" }}
                 // animate={{ x: 0 }}

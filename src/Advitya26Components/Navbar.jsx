@@ -82,10 +82,11 @@ export function GlobalNavbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.nav
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: 'auto' }}
-              exit={{ opacity: 0, width: 0 }}
-              className="rounded-full"
+              role="navigation"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="rounded-none lg:rounded-full absolute left-0 right-0 top-full z-50 lg:static lg:rounded-full overflow-hidden"
               style={{
                 border: '2px ',
                 background: '#f7f6e4',
@@ -95,15 +96,15 @@ export function GlobalNavbar() {
                 boxShadow: '0 0 15px rgba(21, 21, 21, 0.6), 0 0 30px rgba(32, 18, 18, 0.4), 0 0 45px rgb(23, 19, 21)',
               }}
             >
-              <ul className="flex items-center gap-2 px-4 py-2">
+              <ul className="flex flex-col lg:flex-row items-start lg:items-center gap-0 lg:gap-2 px-0 lg:px-4 py-2">
                 {navLinks.map((link) => {
                   const Icon = link.icon;
                   return (
-                    <motion.li key={link.href} whileHover={{ y: -2 }}>
+                    <motion.li key={link.href} whileHover={{ y: -2 }} className="w-full lg:w-auto">
                       <Link
                         to={link.href}
                         onClick={() => setIsOpen(false)}
-                        className="relative flex items-center gap-2 px-3 py-2 rounded-full hover:bg-black/10 transition-colors text-black text-sm group"
+                        className="relative flex items-center justify-start gap-2 px-4 py-3 w-full lg:w-auto rounded-none lg:rounded-full hover:bg-black/10 transition-colors text-black text-sm group"
                       >
                         <Icon size={16} />
                         <span>{link.label}</span>
