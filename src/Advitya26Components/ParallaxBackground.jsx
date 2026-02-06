@@ -1,7 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from 'motion/react'
 import OlympicRings from './OlympicRings'
 
-const ParallaxBackground = () => {
+const ParallaxBackground = ({ onRingsFadeStart = () => { } }) => {
     const { scrollYProgress } = useScroll();
     const x = useSpring(scrollYProgress, { stiffness: 100, damping: 50, mass: 1 });
     const bridge = useTransform(x, [0, 0.5], [0, 500]);
@@ -39,6 +39,7 @@ const ParallaxBackground = () => {
                     assembleY={0.5}
                     finalY={0.15}
                     startFromBelow={true}
+                    onFadeStart={onRingsFadeStart}
                 />
 
                 {/* Golden Bridge */}

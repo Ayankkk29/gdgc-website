@@ -13,9 +13,35 @@ const navLinks = [
   { href: '/advitya/faqs', label: 'FAQs', icon: HelpCircle, underlineColor: '#8b5cf6' },
 ];
 
-export function GlobalNavbar() {
+export function GlobalNavbar({ showLogo = true }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [logoOpacity, setLogoOpacity] = useState(showLogo ? 1 : 0);
+
+  // Fade in logo opacity when showLogo changes
+  useEffect(() => {
+    if (showLogo) {
+      // Fade in the logo
+      const startTime = performance.now();
+      const duration = 1500; // Match OlympicRings fade duration (1.5s)
+
+      const animate = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease in-out
+        const eased = progress < 0.5
+          ? 2 * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+        setLogoOpacity(eased);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }
+  }, [showLogo]);
 
   useEffect(() => {
     const img = new Image();
@@ -56,6 +82,8 @@ export function GlobalNavbar() {
             transformOrigin: 'center',
             willChange: 'transform',
             backfaceVisibility: 'hidden',
+            opacity: logoOpacity,
+            transition: 'opacity 0.1s ease-out',
           }}
         >
           <img
