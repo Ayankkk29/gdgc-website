@@ -156,7 +156,7 @@ export default function HeroSectionDesktop() {
         </div>
         <div className="flex flex-row w-full bottom-0 mx-auto relative">
           {/* location */}
-          <div className="flex flex-col pt-[50vh] h-full">
+          <div className="flex flex-col pt-[50vh] w-[10vw] h-full">
             
             <a
               href="https://www.google.com/maps/search/?api=1&query=23.076944,76.851111"
@@ -175,21 +175,22 @@ export default function HeroSectionDesktop() {
           </div>
 
             {/* Building Illustration */}
+            
           <img
             src={VitVectorImage}
             alt="VIT Bhopal Illustration"
             className="
                 pointer-events-none
-                w-[80%]
+                w-[80vw]
                 max-h-[75vh]
                 object-contain
-                xl:w-[85%]
-                2xl:w-full
+                xl:w-[80vw]
+                2xl:w-[80vw]
               "
           />
 
           {/* GDGC Logo  */}
-          <div className="flex flex-col pt-[50vh] h-full">
+          <div className="flex flex-col pt-[50vh] w-[10vw] h-full">
             <div className="flex">
               <img
                 src={gdgLogo}
