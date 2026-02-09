@@ -234,7 +234,7 @@ export default function ChoosePathCardMobile({ contentOpacity = 1 }) {
 
     return (
         <div
-            className="relative w-full h-full bg-linear-to-br from-[#d2b48c] via-[#c19a6b] to-[#d2b48c] p-3 pb-6 overflow-hidden flex flex-col"
+            className="relative w-full h-full bg-linear-to-br from-[#d2b48c] via-[#c19a6b] to-[#d2b48c] p-3 pb-6 overflow-hidden flex flex-col items-center"
             style={{ boxShadow: "inset 0 0 60px rgba(101, 67, 33, 0.3)" }}
         >
             {/* Vintage border */}
@@ -269,7 +269,7 @@ export default function ChoosePathCardMobile({ contentOpacity = 1 }) {
             {/* Game Grid - 2 columns for mobile */}
             <div
                 ref={gridRef}
-                className="relative grid grid-cols-2 grid-rows-5 gap-x-4 gap-y-2 px-4 py-1 z-10 flex-1 content-center"
+                className="relative grid grid-cols-2 grid-rows-5 gap-x-8 gap-y-2 px-6 py-1 z-10 flex-1 place-content-center items-center justify-items-center"
             >
                 {/* Lines container */}
                 <div
@@ -331,8 +331,8 @@ export default function ChoosePathCardMobile({ contentOpacity = 1 }) {
                             {selectedGame === game.id && (
                                 <motion.div
                                     className={`absolute w-40 ${gridPos.row >= 4
-                                            ? "bottom-full mb-1"
-                                            : "top-full mt-1"
+                                        ? "bottom-full mb-1"
+                                        : "top-full mt-1"
                                         } left-1/2 -translate-x-1/2`}
                                     style={{ zIndex: 1000 }}
                                     initial={{ opacity: 0, scale: 0.95 }}
