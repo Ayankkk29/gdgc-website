@@ -49,7 +49,6 @@ export default function CardMainSection({
     const cardRefs = useRef([]);
     const lastCardInnerRef = useRef(null);
     const [contentOpacity, setContentOpacity] = useState(0);
-    const [dynamicHeight, setDynamicHeight] = useState("400vh"); // Initial estimate
     const childArray = Children.toArray(children);
 
     const cardWidthVw = getCardWidthVw(cardSize);
@@ -91,27 +90,20 @@ export default function CardMainSection({
             // Force layout recalculation
             track.offsetHeight;
 
-            // Calculate how far to scroll horizontally to CENTER the last card
-            const lastCardRect = lastCardEl.getBoundingClientRect();
-            const trackRect = track.getBoundingClientRect();
-            const viewportCenter = window.innerWidth / 2;
-
-            // Position of last card center relative to track start
+            // Use offsetLeft/offsetWidth instead of getBoundingClientRect
+            // These are layout-based and don't depend on scroll position or timing
             const lastCardCenterInTrack =
-                lastCardRect.left - trackRect.left + lastCardRect.width / 2;
+                lastCardEl.offsetLeft + lastCardEl.offsetWidth / 2;
 
             // Scroll needed to bring last card center to viewport center
+            const viewportCenter = window.innerWidth / 2;
             const scrollToCenter = lastCardCenterInTrack - viewportCenter;
             const scrollWidth = Math.max(0, scrollToCenter);
 
             const scaleDistance = scaleLastCard ? window.innerHeight * 1.5 : 0;
             // Extra scroll buffer so the animation finishes before the pin ends
-            // This prevents the FAQ from appearing while the card is still scaling
             const scrollBuffer = scaleLastCard ? window.innerHeight * 0.6 : 0;
             const totalDistance = scrollWidth + scaleDistance + scrollBuffer;
-
-            // Update container height based on actual scroll width
-            setDynamicHeight(`${window.innerHeight + totalDistance}px`);
 
             if (totalDistance <= 0) return;
 
@@ -186,7 +178,7 @@ export default function CardMainSection({
                 start: "top top",
                 end: () => `+=${totalDistance}`,
                 pin: section,
-                pinSpacing: false,
+                pinSpacing: true,
                 scrub: 0.1,
                 animation: mainTL,
                 invalidateOnRefresh: true,
@@ -254,10 +246,8 @@ export default function CardMainSection({
         <div
             ref={containerRef}
             style={{
-                height: dynamicHeight,
                 position: "relative",
                 zIndex: 2,
-                overflow: "hidden",
             }}
         >
             <section
