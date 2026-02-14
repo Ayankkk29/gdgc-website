@@ -252,7 +252,7 @@ function HeroSectionMobile() {
                 {/* Join button */}
                 <Button className="absolute bottom-30 left-1/2 -translate-x-1/2 w-37">
                     <ExternalLink color="white" />
-                    <Link to="/join" className="inline lg:hidden text-sm">
+                    <Link to="https://gdg.community.dev/gdg-on-campus-vellore-institute-of-technology-bhopal-india/" className="inline lg:hidden text-sm">
                         Join
                     </Link>
                 </Button>
