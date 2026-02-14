@@ -254,7 +254,7 @@ function MobileNavBar() {
                             Contact
                         </MobileNavLink>
                         <MobileNavLink to="/advitya" onNavigate={closeMenu}>
-                            Advitya
+                            <img src="/olympicsImages/advitya.png" alt="Advitya" className="w-[18vw] h-[3vh]" />
                         </MobileNavLink>
                         <MobileNavLink to="/about" onNavigate={closeMenu}>
                             About
@@ -269,7 +269,7 @@ function MobileNavBar() {
 
                     <div className="relative z-10 p-4">
                         <Link
-                            to="/join"
+                            to="https://gdg.community.dev/gdg-on-campus-vellore-institute-of-technology-bhopal-india/"
                             onClick={closeMenu}
                             className="block w-full rounded-md bg-blue-500 px-4 py-3 text-center font-semibold text-white"
                         >

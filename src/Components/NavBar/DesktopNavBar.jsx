@@ -223,7 +223,7 @@ function DesktopNavBar() {
                             asChild
                             className={navigationMenuTriggerStyle()}
                         >
-                            <Link to="/advitya">Advitya</Link>
+                            <Link to="/advitya"><img src="/olympicsImages/advitya.png" alt="advitya" className="w-[7vw] top-1" /></Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
 
@@ -236,21 +236,21 @@ function DesktopNavBar() {
                         </NavigationMenuLink>
                     </NavigationMenuItem>
 
-                    <NavigationMenuItem>
+                    {/* <NavigationMenuItem>
                         <NavigationMenuLink
                             asChild
                             className={navigationMenuTriggerStyle()}
                         >
                             <Link to="/event-registration">Register</Link>
                         </NavigationMenuLink>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
                 </NavigationMenuList>
             </NavigationMenu>
 
             {/* CTA Button */}
             <Button className="mb-1 rounded-full bg-linear-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700">
                 <ExternalLink color="white" />
-                <Link to="/join" className="inline text-sm">
+                <Link to="https://gdg.community.dev/gdg-on-campus-vellore-institute-of-technology-bhopal-india/" className="inline text-sm">
                     Join Us 🚀
                 </Link>
             </Button>

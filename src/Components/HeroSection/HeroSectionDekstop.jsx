@@ -124,6 +124,18 @@ export default function HeroSectionDesktop() {
           ease: "easeInOut",
         }}
       />
+      <motion.div
+      animate={{y:[-1,0]}}
+      transition={{
+        duration:5,
+        ease:"easeIn",
+        delay:5
+      }}
+      className="fixed z-[999] top-14 w-[9vw] right-[10vh]">
+        <a href="/advitya">
+          <img src="/olympicsImages/flag.png" alt="flag" />
+          </a>
+      </motion.div>
 
 
       {/* Main content */}

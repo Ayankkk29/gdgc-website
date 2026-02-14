@@ -236,6 +236,18 @@ function HeroSectionMobile() {
                       ease: "easeInOut",
                     }}
                 />
+                <motion.div
+                  animate={{y:[-1,0]}}
+                  transition={{
+                    duration:5,
+                    ease:"easeIn",
+                    delay:5
+                  }}
+                  className="fixed z-[999] top-15 w-[15vw] left-[15px]">
+                    <a href="/advitya">
+                      <img src="/olympicsImages/flag.png" alt="flag" />
+                      </a>
+                  </motion.div>
 
                 {/* Join button */}
                 <Button className="absolute bottom-30 left-1/2 -translate-x-1/2 w-37">
