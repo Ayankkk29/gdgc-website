@@ -21,7 +21,7 @@ function App() {
       {showPopup && (
         <AdvityaPopup onClose={() => setShowPopup(false)} />
       )}
-      <div className=" z-9999 select-none pointer-events-none absolute left-[2%] top-[6%] lg:w-20 xl:w-20 opacity-90">
+      <div className=" z-9999 select-none pointer-events-none absolute left-[2%] top-[6%] lg:w-20 xl:w-20 opacity-100">
         <DinoFollower/>
       </div>
       <NavBar />
