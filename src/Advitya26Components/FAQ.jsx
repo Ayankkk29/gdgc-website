@@ -168,10 +168,11 @@ export default function FAQ() {
 
   return (
     <div
-      className="w-screen min-h-screen relative flex flex-col isolate"
+      className="w-screen min-h-[80vh] max-h-[80vh] overflow-y-auto relative flex flex-col isolate"
       style={{
         fontFamily: "'Poppins', sans-serif",
-        minHeight: '100vh',
+        minHeight: '80vh',
+        maxHeight: '100vh',
         width: '100vw',
         backgroundImage: "url('/FAQ_BG.png')",
         backgroundSize: '100% 100%',
