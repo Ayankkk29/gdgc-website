@@ -141,13 +141,13 @@ const AsteriskIcon = ({ color }) => {
 };
 
 const FAQCard = ({ question, answer, iconColor }) => (
-  <div className="border border-black/100 rounded-lg p-3 md:p-6 flex items-center gap-4 md:gap-8 bg-black/15 transition-colors w-full max-w-10xl" style={{ fontFamily: "'Arial Rounded MT Bold', Arial, sans-serif" }}>
+  <div className="border border-black/100 rounded-lg p-7 md:p-6 flex items-center gap-8 md:gap-8 bg-black/10 md:bg-black/5 transition-colors w-full max-w-10xl" style={{ fontFamily: "'Arial Rounded MT Bold', Arial, sans-serif" }}>
     <div className="flex-shrink-0">
       <AsteriskIcon color={iconColor} />
     </div>
     <div>
-      <h3 className="text-black font-extrabold text-base md:text-xl mb-1 md:mb-2">{question}</h3>
-      <p className="text-black/90 text-xs md:text-base font-extrabold">{answer}</p>
+      <h3 className="text-black font-extrabold text-xl md:text-xl mb-3 md:mb-2">{question}</h3>
+      <p className="text-black/90 text-base md:text-base font-extrabold">{answer}</p>
     </div>
   </div>
 );
@@ -193,11 +193,10 @@ export default function FAQ() {
       <div
         className="relative z-20 px-4 md:px-28 py-4 md:py-12 shrink-0"
         style={{
-          // Removed backgroundColor and grid background to let FAQ_BG show
         }}
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          <h1 className="text-black text-[40px] md:text-[100px] font-extrabold mb-4 md:mb-0 tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
+          <h1 className="text-black text-[40px] md:text-[100px] font-extrabold mb-0 md:mb-0 tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
             FAQs
           </h1>
 
@@ -222,7 +221,7 @@ export default function FAQ() {
       {/* Content */}
       <div className="relative z-10 px-4 md:px-28 pt-2 pb-2 md:pb-4">
         <div className="space-y-2 md:space-y-4">
-          <h2 className="text-black text-lg md:text-2xl font-extrabold mb-3 md:mb-4 uppercase">
+          <h2 className="text-black text-lg md:text-2xl font-extrabold mt-1 mb-3 md:mb-4 uppercase">
             {activeTab}
           </h2>
           <div className="space-y-2 md:space-y-4 text-black">
