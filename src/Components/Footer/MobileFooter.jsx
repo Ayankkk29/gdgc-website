@@ -40,7 +40,7 @@ export default function MobileFooter() {
                         className="h-10 w-auto"
                     />
                     <div className="leading-tight">
-                        <div className="text-base font-bold">GDG</div>
+                        <div className="text-base font-bold">GDG On Campus</div>
                         <div className="text-xs text-white/80 tracking-wide">
                             VIT BHOPAL
                         </div>

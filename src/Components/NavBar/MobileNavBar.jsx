@@ -150,7 +150,7 @@ function MobileNavBar() {
                             <div className="text-sm font-medium">
                                 GDG On Campus
                             </div>
-                            <div className="text-xs font-medium ml-2">VIT Bhopal
+                            <div className="text-xs font-medium">VIT Bhopal
                             </div>
                         </div>
                     </Link>

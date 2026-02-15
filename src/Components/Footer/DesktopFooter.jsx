@@ -38,7 +38,7 @@ export default function DesktopFooter() {
                                 className="h-12 w-auto"
                             />
                             <div className="leading-tight">
-                                <div className="text-lg font-bold">GDG</div>
+                                <div className="text-lg font-bold">GDG On Campus</div>
                                 <div className="text-sm text-white/80 tracking-wide">
                                     VIT BHOPAL
                                 </div>

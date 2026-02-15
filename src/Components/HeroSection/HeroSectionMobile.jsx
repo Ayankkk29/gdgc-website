@@ -18,6 +18,7 @@ import gdgRightHalf from "@/assets/gdg_right_half.png";
 
 import { Button } from "@/shadcn/ui/button.jsx";
 import { ExternalLink, MapPin } from "lucide-react";
+import DinoFollower from "../DinoFollower";
 
 function HeroSectionMobile() {
     return (
@@ -128,16 +129,16 @@ function HeroSectionMobile() {
                   ease: "easeInOut",
                 }}
             />
-            <motion.a
+            {/* <motion.a
   href="/advitya"
   className="advitya-flag-mobile"
   animate={{ y: [0, -5, 0] }}
   transition={{ duration: 2.5, repeat: Infinity }}
 >
   advitya
-</motion.a>
+</motion.a> */}
 
-<motion.a
+{/* <motion.a
   href="https://forms.gle/geUHuLxd2PenFN4s8"
   target="_blank"
   rel="noopener noreferrer"
@@ -146,7 +147,7 @@ function HeroSectionMobile() {
   transition={{ duration: 2.5, repeat: Infinity }}
 >
   register
-</motion.a>
+</motion.a> */}
 
 
             {/* this kite is not in design */}
@@ -158,6 +159,7 @@ function HeroSectionMobile() {
             /> */}
 
             {/* Main layout */}
+            <DinoFollower />
             <div className="relative mx-auto flex min-h-[calc(100svh-3.25rem)] max-w-107.5 flex-col items-center px-4 pb-5 pt-4">
                 <h1
                     className="mt-8 text-center leading-[0.9]"
