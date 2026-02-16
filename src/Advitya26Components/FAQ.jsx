@@ -4,53 +4,82 @@ import { useState } from 'react';
 const faqData = {
   general: [
     {
-      question: "What is the event about?",
-      answer: "This event is a hackathon where participants can collaborate on projects.",
+      question: "What is Google Olympics?",
+      answer: "Google Olympics is a fun and competitive event organized by Google Developer Groups (GDG) at VIT Bhopal. It includes 10 different games that test teamwork, memory, creativity, physical coordination, and coding skills.",
       iconColor: "yellow"
     },
     {
-      question: "Who can participate?",
-      answer: "Anyone interested in technology and innovation can participate.",
+      question: "Who will win the Google Olympics?",
+      answer: "The team with the highest total points after all 10 games will be declared the winner.",
       iconColor: "cyan"
     },
     {
-      question: "Is there a participation fee?",
-      answer: "No, the event is free to attend.",
+      question: "What kind of skills are required?",
+      answer: (
+        <ul style={{ paddingLeft: '0em', margin: 0 }}>
+          <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>-Logical thinking</strong></li>
+          <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>-Team coordination</strong></li>
+          <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>-Quick decision-making</strong></li>
+          <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>-Creativity</strong></li>
+          <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>-Basic technical understanding</strong></li>
+          <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>-Physical coordination</strong></li>
+        </ul>
+      ),
       iconColor: "blue"
     }
+    
   ],
   registration: [
     {
-      question: "How do I register?",
-      answer: "You can register through our official website.",
+      question: "How can participants register?",
+      answer: (
+        <span><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}></strong>
+          <ul><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>
+          Participants can register through GDG website or go through this link:</strong></ul>
+          <ul><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}> <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8HHryzN-7d3mNEyGg_iyoKqA2k4-TPHSzbqH4oxgG1j7HjQ/viewform" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'underline' }}>
+          ➡️ Google Olympics 2.0 Registration Form</a></strong></ul>
+        </span>
+      ),
       iconColor: "yellow"
     },
     {
-      question: "What information is required for registration?",
-      answer: "You will need to provide your name, email, and a brief bio.",
+      question: "How early should teams report to the venue?",
+      answer: "Teams are advised to report at least 10–15 minutes before 10:00 AM for smooth coordination.",
       iconColor: "cyan"
     },
     {
-      question: "Can I register as a team?",
-      answer: "Yes, you can register as a team of 4 members.",
+      question: "Do participants need to bring anything?",
+      answer: (
+        <ul style={{ paddingLeft: '0em', margin: 0 }}>
+        <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>- Participants should bring:</strong></li>
+        <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>- A laptop (one for a team)</strong></li>
+        <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>- Basic essentials like water</strong></li>
+        <li><strong style={{ fontWeight: 900, letterSpacing: '0.5px' }}>- College ID card</strong></li>
+        </ul>
+      ),
       iconColor: "blue"
     }
   ],
-  hackathon: [
+  about: [
     {
-      question: "What are the judging criteria?",
-      answer: "Projects will be judged based on creativity, technical complexity, and impact.",
+      question: "When and where will the event take place?",
+      answer: "The event will be held on 27th February from 10:00 AM to 2:00 PM at AB2 – Auditorium 1, VIT Bhopal.",
       iconColor: "yellow"
     },
     {
-      question: "Are there any prizes?",
-      answer: "Yes, there are several prizes for the top projects.",
+      question: "What types of games are included?",
+      answer: "The event comprises games which challenge a team to think logically, behave rationally and test physical as well as mental strength.",
       iconColor: "cyan"
     },
     {
-      question: "Can I work on a project before the event?",
-      answer: "No, all work must be done during the hackathon.",
+      question: "Is there any elimination round?",
+      answer: "No. There are no eliminations. All teams will play all 10 games.",
       iconColor: "blue"
+    },
+    {
+      question: "How will the scores get calculated?",
+      answer: "Points will be awarded after every game based on performance.",
+      iconColor: "yellow"
     }
   ]
 };
@@ -147,7 +176,11 @@ const FAQCard = ({ question, answer, iconColor }) => (
     </div>
     <div>
       <h3 className="text-black font-extrabold text-xl md:text-xl mb-3 md:mb-2">{question}</h3>
-      <p className="text-black/90 text-base md:text-base font-extrabold">{answer}</p>
+      {typeof answer === 'string' ? (
+        <p className="text-black/90 text-base md:text-base font-extrabold">{answer}</p>
+      ) : (
+        answer
+      )}
     </div>
   </div>
 );
@@ -158,7 +191,7 @@ export default function FAQ() {
   const tabs = [
     { id: 'general', label: 'GENERAL' },
     { id: 'registration', label: 'REGISTRATION' },
-    { id: 'hackathon', label: 'HACKATHON' }
+    { id: 'about', label: 'ABOUT' }
   ];
 
   // Handle tab click
@@ -225,7 +258,7 @@ export default function FAQ() {
             {activeTab}
           </h2>
           <div className="space-y-2 md:space-y-4 text-black">
-            {faqData[activeTab].map((faq, index) => (
+            {(faqData[activeTab] || []).map((faq, index) => (
               <FAQCard key={index} {...faq} />
             ))}
           </div>
