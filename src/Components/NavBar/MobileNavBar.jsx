@@ -254,19 +254,7 @@ function MobileNavBar() {
                             Contact
                         </MobileNavLink>
                         <MobileNavLink to="/advitya" onNavigate={closeMenu}>
-                            <span
-                                className="inline-block font-bold text-base tracking-wide relative"
-                                style={{
-                                    background: 'linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000)',
-                                    backgroundSize: '200% 100%',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent',
-                                    backgroundClip: 'text',
-                                    animation: 'rainbow-text-flow 3s linear infinite',
-                                }}
-                            >
-                                ADVITYA
-                            </span>
+                            <img src="/olympicsImages/advitya.png" alt="Advitya" className="w-[18vw] h-[3vh]" />
                         </MobileNavLink>
                         <MobileNavLink to="/about" onNavigate={closeMenu}>
                             About

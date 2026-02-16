@@ -219,13 +219,11 @@ function DesktopNavBar() {
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <NavigationMenuLink asChild>
-                            <Link
-                                to="/advitya"
-                                className="advitya-rainbow-border group inline-flex h-9 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-bold tracking-wide transition-[color,box-shadow] outline-none relative overflow-hidden"
-                            >
-                                <span className="relative z-10">ADVITYA</span>
-                            </Link>
+                        <NavigationMenuLink
+                            asChild
+                            className={navigationMenuTriggerStyle()}
+                        >
+                            <Link to="/advitya"><img src="/olympicsImages/advitya.png" alt="advitya" className="w-[7vw] top-1" /></Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
 
